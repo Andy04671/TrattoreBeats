@@ -25,7 +25,7 @@
 
 ## 🚀 Come usare
 
-1. Vai su [https://tuo-nome.github.io/TrattoreBeats](https://tuo-nome.github.io/TrattoreBeats) (sostituisci con il tuo link GitHub Pages)
+1. Vai su https://andy04671.github.io/TrattoreBeats/
 2. Tocca una radio per avviare lo streaming.
 3. Usa il player per mettere in pausa o riprendere.
 4. Tocca l’icona Spotify per aprire la playlist personale.
