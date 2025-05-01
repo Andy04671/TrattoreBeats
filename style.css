@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in;
+}
+
+h1, p {
+  animation: fadeIn 1.5s ease-in;
+}
+
+.radio-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+.radio-item {
+  padding: 15px;
+  background-color: #333;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.radio-item img.radio-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
+  object-fit: contain; /* così anche loghi diversi rimangono ordinati */
+}
+
+.radio-item span {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.radio-item:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.radio-item:active {
+  transform: scale(0.95);
+}
+
+.radio-item.active {
+  background-color: #007BFF;
+  color: white;
+  box-shadow: 0 0 10px #007BFF;
+}
+
+/* Stile base dell'audio */
+audio {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+  appearance: none;
+  background-color: transparent;
+}
+
+/* Personalizzazione per la barra su WebKit (iPhone/Safari/Chrome) */
+audio::-webkit-media-controls-panel {
+  background-color: #222;
+  border-radius: 15px;
+}
+
+/* Barra di avanzamento */
+/* audio::-webkit-media-controls-timeline {
+  background-color: #444;
+  border-radius: 10px;
+} */
+
+/* Pallino che si muove sulla timeline */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #fff;
+}
+
+/* Pallino slider */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+  filter: invert(100%); /* Per rendere pulsanti più chiari */
+}
+
+
+
+
+/* Timeline slider */
+audio::-webkit-slider-thumb {
+  background: #00aaff;
+}
+
+/* Linea caricata */
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button {
+  filter: invert(100%);
+}
+
+
+.custom-player {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+#play-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+#play-button:hover {
+  background-color: #0056b3;
+}
+
+#progress-container {
+  background: #444;
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#progress-bar {
+  background: #00ff00;
+  height: 100%;
+  width: 0%;
+  transition: width 0.2s;
+}
+
+
+
+/* Animazione fade-in */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
